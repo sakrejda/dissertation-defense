@@ -171,6 +171,18 @@
 \end{frame}
 
 
+\begin{frame}{individual based models to the rescue.}
+  \framesubtitle{I told you so.} 
+
+\begin{quote}
+"We have argued that the aggregation of individuals 
+into large-scale population variables often glosses over mechanisms and 
+variability at the level of individual interactions that are crucial 
+to the larger-scale behavior of populations, communities, and ecosystems"
+\end{quote}
+Houston, DeAngelis, Post (1988)
+  
+\end{frame}
 
 \begin{frame}{individual based models to the rescue.}
   \framesubtitle{everything should be fine then.} 
@@ -187,17 +199,17 @@ Houston, DeAngelis, Post (1988)
 
 \end{frame}
 
-\begin{frame}{individual based models to the rescue.}
-  \framesubtitle{I told you so.} 
+\begin{frame}{What is an IBM.}
+	\framesubtitle{paradise for lovers of box diagrams.}
+    
+    \begin{enumerate}
+    \item define individual use of the environment, interactions with others, resource needs
+    \item define the composition of a starting population
+    \item use stochastic simulation to predict the future fate of individuals and their offspring
+    \item aggregate the individual fates to predict ecosystem-level outcomes
+    \end{enumerate}
+    
 
-\begin{quote}
-"We have argued that the aggregation of individuals 
-into large-scale population variables often glosses over mechanisms and 
-variability at the level of individual interactions that are crucial 
-to the larger-scale behavior of populations, communities, and ecosystems"
-\end{quote}
-Houston, DeAngelis, Post (1988)
-  
 \end{frame}
 
 \begin{frame}{Atlantic salmon}
@@ -219,6 +231,45 @@ Houston, DeAngelis, Post (1988)
 \begin{frame}{MORE SALMON STUFF JUST T/D EFFECTS ON SURVIVAL}
 \end{frame}
 
+
+
+\begin{frame}{environmental conditions}
+  \framesubtitle{stream discharge and water temperature}	
+  \includegraphics[clip, trim=0 0 0 0, height=.8\textheight]{pl-environment-wide.pdf}
+    
+\end{frame}
+
+\begin{frame}{global models}
+
+\begin{table}
+\begin{center}
+$
+\begin{array}{lllll}
+	Model \# & Survival                                                                          & Recapture                              & Smolting & Emigration \\
+	0        & \phi_S                                                                            & p_S                                    & \alpha_S & \rho_S     \\
+	1        & \phi_S                                                                            & p(d,4)                                 & \alpha_A & \rho_S     \\
+	2        & \phi_{A\times S}                                                                  & p(d,4)                                 & \alpha_A & \rho_S     \\
+	3        & \phi_{A\times S}                                                                  & p(d,4) + p_{OCC}                       & \alpha_A & \rho_S     \\
+	4        & \phi_{A\times S} + \phi_{A+A:S}(T) + \phi_{A+A:S}(F) + \phi_{S}(T\times F)        & p(d,4)                                 & \alpha_A & \rho_S     \\
+	5        & \phi_{A\times S} + \phi_{A+A:S}(T) + \phi_{A+A:S}(F) + \phi_{S}(T\times F)        & p(d,4) + p_{OCC}                       & \alpha_A & \rho_S     \\
+	6        & \phi_{A\times S} + \phi_{A+A:S}(T)^2 + \phi_{A+A:S}(F)^2 + \phi_{S}(T \times F)^2 & p(d,4) +  p_{OCC}                      & \alpha_A & \rho_S     \\
+	7        & \phi_S                                                                            & p(d,4) + p(dT) + p(d\log(F))           & \alpha_A & \rho_S     \\
+	8        & \phi_{A\times S}                                                                  & p(d,4) + p(dT) + p(d\log(F))           & \alpha_A & \rho_S     \\
+	9        & \phi_{A\times S}                                                                  & p(d,4) + p(dT) + p(d\log(F)) + p_{OCC} & \alpha_A & \rho_S     \\
+	10       & \phi_{A\times S} + \phi_{A+A:S}(T) + \phi_{A+A:S}(F) + \phi_{S}(T\times F)        & p(d,4) + p(dT) + p(d\log(F))           & \alpha_A & \rho_S     \\
+	11       & \phi_{A\times S} + \phi_{A+A:S}(T) + \phi_{A+A:S}(F) + \phi_{S}(T\times F)        & p(d,4) + p(dT) + p(d\log(F)) + p_{OCC} & \alpha_A & \rho_S     \\
+	12       & \phi_{A\times S} + \phi_{A+A:S}(T)^2 + \phi_{A+A:S}(F)^2 + \phi_{S}(T \times F)^2 & p(d,4) + p(dT) + p(d\log(F)) + p_{OCC} & \alpha_A & \rho_S
+\end{array}
+$
+\end{center}
+\end{table}
+
+    
+\end{frame}
+
+
+
+
 \begin{frame}{seasonal age-specific survival}
   \framesubtitle{modified cjs, global response model}
 
@@ -236,6 +287,25 @@ Houston, DeAngelis, Post (1988)
 	\includegraphics[clip, trim=0 0 0 35, height=.8\textheight]{pl-1-1-cjs-seasonal-logit-recapture_full_RE-phi_full_x-phi-heat-map.pdf}
   	\end{figure}
 
+\end{frame}
+
+
+\begin{frame}{timing of emigration}
+  \framesubtitle{slow}	
+  \includegraphics[clip, trim=0 0 0 0, height=.8\textheight]{emigrant-tracks.pdf}
+    
+\end{frame}
+
+\begin{frame}{timing of emigration}
+  \framesubtitle{slow}	
+  \includegraphics[clip, trim=0 0 0 0, height=.8\textheight]{emigrant-timing.pdf}
+    
+\end{frame}
+
+\begin{frame}{timing of emigration}
+  \framesubtitle{slow}	
+  \includegraphics[clip, trim=0 0 0 0, height=.8\textheight]{emigrant-fast-events.pdf}
+    
 \end{frame}
 
 
